@@ -26,7 +26,13 @@
           <%= link_to "Add a flat", new_flat_path, class: 'nav-item nav-link' %>
         </div>
         <div class="navbar-nav">
-          <a href="#" class='nav-item nav-link'>About</a>
+          <%= link_to "Up to £50", flats_path(price: '50'), class: 'nav-item nav-link' %>
+        </div>
+        <div class="navbar-nav">
+          <%= link_to "Up to £80", flats_path(price: '80'), class: 'nav-item nav-link' %>
+        </div>
+        <div class="navbar-nav">
+          <%= link_to "Up to £120", flats_path(price: '120'), class: 'nav-item nav-link' %>
         </div>
       </div>
     </nav>

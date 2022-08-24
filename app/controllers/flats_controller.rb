@@ -3,6 +3,9 @@ class FlatsController < ApplicationController
 
   def index
     @flats = Flat.all
+    if params[:price]
+      @flats = Flat.where("price_per_night < #{params[:price].to_i}")
+    end
   end
 
   def show

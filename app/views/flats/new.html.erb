@@ -1,0 +1,11 @@
+<div class="container mt-3">
+  <h1>Add a flat:</h1>
+</div>
+<div class="container mt-3">
+  <%= render 'flats_form', flat: @flat %>
+  <div class="card mt-2 mb-3">
+    <div class="card-body">
+      <%= link_to "See all", flats_path, class: "btn btn-primary" %>
+    </div>
+  </div>
+</div>

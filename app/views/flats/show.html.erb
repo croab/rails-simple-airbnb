@@ -1,0 +1,21 @@
+<div class="container mt-3">
+  <div class="card">
+    <div class="card-image mx-5 my-3">
+      <img class="card-img-top"
+            src=<%= @flat.image_url %>
+            alt="Picture of a house">
+    </div>
+    <div class="card-body">
+      <h1><%= @flat.name %></h1>
+      <p><%= @flat.address %></p>
+      <p><i class="fa-solid fa-euro-sign"></i></strong> <%= @flat.price_per_night %></p>
+      <p><strong><i class="fa-solid fa-person-half-dress"></i></strong> <%= @flat.number_of_guests %></p>
+      <%= link_to "Edit flat", edit_flat_path(@flat), class: 'btn btn-primary mt-3' %>
+      <%= link_to "See all", flats_path, class: 'btn btn-primary mt-3' %>
+      <%= link_to "Delete flat",
+          flat_path(@flat),
+          data: {turbo_method: :delete, turbo_confirm: "Are you sure?"},
+          class: 'btn btn-danger mt-3' %>
+    </div>
+  </div>
+</div>
